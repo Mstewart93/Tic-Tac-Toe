@@ -143,7 +143,7 @@ function placeXOrO(squareNumber) {
     //gives access to methods and properties to use on canvas
     let x1 = coordX1,
     //start of a line on the x axis
-        y1 = coordY2,
+        y1 = coordY1,
         //start y axis
         x2 = coordX2,
         //end x axis
