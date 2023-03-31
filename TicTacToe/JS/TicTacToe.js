@@ -76,7 +76,7 @@ function placeXOrO(squareNumber) {
 
     else if (arrayIncludes('6X','7X','8X')) {drawWinLine(50, 508, 558, 508) }
 
-    else if (arrayIncludes('0X','3X','6X')) {drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes('0X','3X','6X')) {drawWinLine(100, 50, 100, 558) }
 
     else if (arrayIncludes('1X','4X','7X')) {drawWinLine(304, 50, 304, 558) }
 
@@ -195,6 +195,12 @@ function placeXOrO(squareNumber) {
     animateLineDrawing();
     setTimeout(function () {clear(); resetGame(); }, 1000);
 
-
-
    }
+
+   function resetGame() {
+    for (let i = 0 ; i < 9; i++) {
+    let square = document.getElementById(String(i));
+    square.style.backgroundImage = '';
+    }
+    selectedSquares = [];
+}
